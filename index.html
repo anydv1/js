@@ -18,9 +18,48 @@
         p.highlighted{
             background: red;
         }
+        .frame{
+        border: 6px solid #000;
+    }
     </style>
 </head>
 <body>
+    <form>
+        <table>
+            <tr>
+                <td>Name:</td>
+                <td>
+                    <input type="text" id="name">
+                </td>
+            </tr>
+            <tr>
+                <td>Comments:</td>
+                <td>
+                    <textarea rows="4" cols="30" id="comment"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>City:</td>
+                <td>
+                    <select id="city">
+                        <option>London</option>
+                        <option>Paris</option>
+                        <option>New York</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <p><strong>Note:</strong> Fill the above form and click the following button to get the value.</p>
+    <button type="button" class="get-name">Get Name</button>
+    <button type="button" class="get-comment">Get Comment</button>
+    <button type="button" class="get-city">Get City</button>
+
+    <script src='./index.js'></script>
+    
+</body>
+</html>                            
+<!-- <body>
 <h2> helloo </h2>
 
 <main>
@@ -47,13 +86,11 @@
 	<div><strong>Note:</strong> Enter something inside the input box and see the result.</div>
     <p>Keypress is triggered.</p>
 
-    <form action="/examples/html/action.php" method="post" id="users">
+    <form action="" method="post" id="users">
         <label for="firstName">First Name:</label>
         <input type="text" name="first-name" id="firstName">
         <input type="submit" value="Submit">
         <div id="result"></div>
     </form>    
-</body>
-<script src='./index.js'></script>
-</body>
+</body> -->
 </html>
