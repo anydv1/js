@@ -10,7 +10,7 @@
         p{
             padding: 20px;
             font: 20px sans-serif;
-            background: #f2f2f2;
+            background:pink;
         }
         p.highlight{
             background: yellow;
@@ -42,6 +42,18 @@
     </section>
   </article>
 </main>
+<input type="text">
+    <div>Keypress: <span>0</span></div>
+	<div><strong>Note:</strong> Enter something inside the input box and see the result.</div>
+    <p>Keypress is triggered.</p>
+
+    <form action="/examples/html/action.php" method="post" id="users">
+        <label for="firstName">First Name:</label>
+        <input type="text" name="first-name" id="firstName">
+        <input type="submit" value="Submit">
+        <div id="result"></div>
+    </form>    
+</body>
 <script src='./index.js'></script>
 </body>
 </html>

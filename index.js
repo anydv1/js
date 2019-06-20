@@ -24,7 +24,7 @@ $(document).ready(function(){
         $(this).slideUp();
     });
 });
-
+//hover method for a class
 $(document).ready(function(){
     $("p").hover(function(){
         $(this).addClass("highlight");
@@ -32,10 +32,36 @@ $(document).ready(function(){
         $(this).removeClass("highlight");
     });
 });
-
+//mouseenter method for a class
 $(document).ready(function(){
     $("p").mouseenter(function(){
         $(this).addClass("highlighted");
+    });
+});
+//mouseleave for a class
+$(document).ready(function(){
+    $("p").mouseleave(function(){
+        $(this).removeClass("highlighted");
+    });
+});
+
+//on keyboard event
+$(document).ready(function(){
+    var i = 0;
+    $('input[type="text"]').keypress(function(){
+        $("span").text(i += 1);
+        $("p").show().fadeOut();
+    });
+});
+$(document).ready(function(){
+    $("form").submit(function(event){
+        var regex = /^[a-zA-Z]+$/;
+        var currentValue = $("#firstName").val();
+        if(regex.test(currentValue) == false){
+            $("#result").html('<p class="error">Not valid!</p>').show().fadeOut(1000);
+            // Preventing form submission
+            event.preventDefault();
+        }
     });
 });
   //JAvaScript
