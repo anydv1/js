@@ -20,8 +20,6 @@ router.post('/users', function(req, res) {
   router.get('/users/:id', function(req, res) {
   User.find({_id:req.params.id},function(err,users){
     if (err) return err;
-    console.log('data',users);
-    console.log('ppp',users._id)
     res.render('../views/event.ejs', { result: users});
     // res.render('../views/event.ejs');
     // res.send(users)

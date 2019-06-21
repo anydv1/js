@@ -38,7 +38,10 @@ $(document).ready(function() {
    });
 });
 
-	
+
+function myFunction() {
+   document.getElementById("name").style.color = "red";
+ }
 
    
       // $("#driver").click(function(event){

@@ -15,10 +15,7 @@ const mongoose = require('mongoose');
 const MONGO_URL = 'mongodb://localhost:27017/jsjqueryapp';
 
 const app = express();
-// app.use(function(req, res, next) {
-//   res.set('Cache-Control', 'no-cache, private, no-store, must-revalidate, max-stale=0, post-check=0, pre-check=0');
-//   next();
-// });
+
 app.use(function(req, res, next) {
   res.set('Cache-Control', 'no-cache, private, no-store, must-revalidate, max-stale=0, post-check=0, pre-check=0');
   next();

@@ -9,14 +9,14 @@
 <body>
     <%if (result.length >0) { %>
     <div class="card__content">
-            <h2 class="user__email"> Name-<%- result[0].name %></h2>
-        <h2 class="user__email"> Email- <%- result[0].email %> </h2>
+            <h2 id="name" ondblclick="myFunction()"> Name-<%- result[0].name %></h2>
+         <h2 id="name" ondblclick="myFunction()"> Email- <%- result[0].email %> </h2>
 
     </div>
     <% } else { %>
         <h2> No Results found </h2>
 
         <% } %>
-  
+        <script src='../ajax.js'> </script>
 </body>
 </html>
