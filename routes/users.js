@@ -7,19 +7,24 @@ router.get('/', function(req, res, next) {
   res.render('../views/ajax.ejs');
 });
 router.post('/users', function(req, res) {
-      console.log('oooo',req.body)
      User.create({
        name:req.body.name,
        email:req.body.email
+     },function(err,user){
+      console.log(user)
+      res.send({message:'successfully added',id:user._id})
      })
-     res.send('successfully added')
+ 
   });
 
-  router.get('/users', function(req, res) {
-    console.log('oooo',req.body)
-  User.find({},function(err,users){
+  router.get('/users/:id', function(req, res) {
+  User.find({_id:req.params.id},function(err,users){
     if (err) return err;
-    res.send(users)
+    console.log('data',users);
+    console.log('ppp',users._id)
+    res.render('../views/event.ejs', { result: JSON.stringify(users)});
+    // res.render('../views/event.ejs');
+    // res.send(users)
   })
 });
 module.exports = router;
