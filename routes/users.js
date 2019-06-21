@@ -22,9 +22,30 @@ router.post('/users', function(req, res) {
     if (err) return err;
     console.log('data',users);
     console.log('ppp',users._id)
-    res.render('../views/event.ejs', { result: JSON.stringify(users)});
+    res.render('../views/event.ejs', { result: users});
     // res.render('../views/event.ejs');
     // res.send(users)
   })
 });
+
+router.put('/users/:id', function(req, res) {
+  var data={
+    name:req.body.name,
+    email:req.body.email
+  }
+  User.findByIdAndUpdate(req.params.id,data,function(err,user){
+     if(err) res.send(err) 
+     res.send({message:'updated',data:user})
+
+  })
+  // User.find({_id:req.params.id},function(err,users){
+  //   if (err) return err;
+  //   console.log('data',users);
+  //   console.log('ppp',users._id)
+  //   res.render('../views/event.ejs', { result: users});
+  //   // res.render('../views/event.ejs');
+  //   // res.send(users)
+  // })
+});
+
 module.exports = router;

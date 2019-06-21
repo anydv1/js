@@ -7,15 +7,16 @@
     <title>Users Information</title>
 </head>
 <body>
-    <% if (result) { %>
-        
-        <script>
-            var data = JSON.parse('<%- result %>');
-            console.table(data[0]);
-            
-        </script>
-    <% } %>
-    
+    <%if (result.length >0) { %>
+    <div class="card__content">
+            <h2 class="user__email"> Name-<%- result[0].name %></h2>
+        <h2 class="user__email"> Email- <%- result[0].email %> </h2>
+
+    </div>
+    <% } else { %>
+        <h2> No Results found </h2>
+
+        <% } %>
   
 </body>
 </html>

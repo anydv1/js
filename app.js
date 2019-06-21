@@ -12,7 +12,7 @@ const mongoose = require('mongoose');
 
 // const MongoDBStore = require('connect-mongodb-session')(session);
 
-const MONGO_URL = 'mongodb://localhost:27017/contacts';
+const MONGO_URL = 'mongodb://localhost:27017/jsjqueryapp';
 
 const app = express();
 // app.use(function(req, res, next) {
